@@ -1,2 +1,2 @@
 <!--index.wxml-->
-<view class="title">Hello, World.</view> 
+<view class="temp">12°C</view> 
