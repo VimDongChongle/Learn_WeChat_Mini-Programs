@@ -24,6 +24,13 @@ Page({
     nowWeather: '晴天',
     nowWeatherBackground: ''
   },
+  //跳转事件
+  bindViewTap: function() {
+    wx.navigateTo({
+      url: '../timer/timer'
+    })
+  },
+
   onLoad() {
     wx.request({
       url: 'https://test-miniprogram.com/api/weather/now',
