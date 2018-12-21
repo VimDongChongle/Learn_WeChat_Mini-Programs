@@ -1,5 +1,4 @@
 //index.js
-//获取应用实例
 const weatherMap = {
   'sunny': '晴天',
   'cloudy': '多云',
