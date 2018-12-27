@@ -22,7 +22,8 @@ Page({
   data: {
     nowTemp: '12°C',
     nowWeather: '晴天',
-    nowWeatherBackground: ''
+    nowWeatherBackground: '',
+    forecast: []
   },
   //跳转事件
   bindViewTap: function() {
@@ -58,9 +59,24 @@ Page({
           nowWeather: weatherMap[weather],
           nowWeatherBackground: '/images/' + weather + '-bg.png'
         }),
+
         wx.setNavigationBarColor({
           frontColor: '#000000',
           backgroundColor: weatherColorMap[weather]
+        });
+
+        let forecast = [];
+        let nowHour = new Date().getHours()
+        for (var i = 0; i < 24; i += 3) {
+          forecast.push({
+            time: (i + nowHour) % 24 + "时",
+            iconPath: '/images/sunny-icon.png',
+            temp: "12°"
+          })
+        }
+        forecast[0].time = '现在';
+        this.setData({
+          forecast: forecast
         })
       },
       complete: ()=> {
