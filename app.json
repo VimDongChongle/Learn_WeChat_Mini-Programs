@@ -4,9 +4,10 @@
     "pages/timer/timer"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#cbeefd",
     "navigationBarTitleText": "WeChat",
-    "navigationStyle":"default"
+    "navigationStyle":"default",
+    "enablePullDownRefresh": true
   }
 }
